@@ -1,0 +1,34 @@
+{
+	"authHost": "https://sapi.test.sosoyoyo.com",
+	"authEndpoint": "/api/broadcasting/auth",
+	"clients": [],
+	"database": "redis",
+	"databaseConfig": {
+		"redis" : {
+			"port": "10001",
+			"password":"XSYTestRedis123456",
+			"host": "172.18.17.50",
+			"keyPrefix": "php:"
+		}
+	},
+	"devMode": false,
+	"host": "0.0.0.0",
+	"port": "6001",
+	"protocol": "http",
+	"socketio": {},
+	"secureOptions": 67108864,
+	"sslCertPath": "",
+	"sslKeyPath": "",
+	"sslCertChainPath": "",
+	"sslPassphrase": "",
+	"subscribers": {
+		"http": true,
+		"redis": true
+	},
+	"apiOriginAllow": {
+		"allowCors": false,
+		"allowOrigin": "",
+		"allowMethods": "",
+		"allowHeaders": ""
+	}
+}

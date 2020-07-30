@@ -1,0 +1,20 @@
+version: '3.2'
+networks:
+  default:
+    external:
+      name: ${EXTERNAL_NETWORKS_NAME}
+
+services:
+  laravel-echo-server:
+    build:
+      context: ./image
+    image: laravel-echo-server
+    container_name: laravel-echo-server
+    volumes:
+      - type: bind
+        source: ./image/laravel-echo-server.json
+        target: /app/laravel-echo-server.json
+    ports:
+      - "${LARAVEL_ECHO_SERVER_PORT}:6001"
+    networks:
+      - default
